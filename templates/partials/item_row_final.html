@@ -1,0 +1,17 @@
+{% if data %}
+        <td>{{ data.item_id }}</td>
+        <td>{{ data.item_name }}</td>
+        <td>{{ data.item_price }}</td>
+        <td>{{ data.item_amount }}</td>
+        <td>{{ data.item_exp_date }}</td>
+        <td>
+            <button class="btn btn-success"
+                            hx-get="{{url_for('update_item', item_id=data['item_id'])}}"
+                            hx-target="#item-row-{{data['item_id']}}"
+
+                    >
+                    Update</button>
+            <button class="btn btn-danger">Delete</button>
+
+        </td>
+{% endif %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+ 
+{% block content %}
+
+
+
+<h1 id="home">this is home</h1>
+
+<img src="{{ url_for('static', filename='image/test.png') }}" alt="test">
+
+
+{% for row in user %}
+
+<p>{{row}}</p>
+
+{% endfor %}
+{% endblock %}
