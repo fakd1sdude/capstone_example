@@ -170,6 +170,13 @@ def setting():
 
 
 
+@app.route('/print_item/<int:item_id>', methods=['POST'])
+def print_item(item_id):
+    item = Item.query.get_or_404(item_id)
+
+    print(item, 'hii')
+    return render_template('partials/print_item.html',  item=item)
+
 
 
 
